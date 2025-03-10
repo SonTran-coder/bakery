@@ -4,6 +4,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --color-primary-100: #000;
+  --color-primary-200: #333;
+  --color-primary-300: #666;
+  --color-primary-400: #999;
+  --color-primary-500: #ccc;
+  --color-background-100: #fafafa;
+  --color-background-200: #fff;
+  --color-opacity: rgba(0, 0, 0, 0.25);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
