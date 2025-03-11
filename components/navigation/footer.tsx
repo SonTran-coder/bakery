@@ -1,3 +1,5 @@
+"use client";
+
 import {
   AddIcCall,
   Facebook,
@@ -7,8 +9,16 @@ import {
   MailOutline,
   Twitter,
 } from "@/assets/svgs";
+import { exceptPage } from "./navigation-bar";
+import { usePathname } from "next/navigation";
 
 function Footer() {
+  const pathname = usePathname();
+
+  if (exceptPage.some((page) => pathname.startsWith(page))) {
+    return <></>;
+  }
+  
   return (
     <div className="w-full">
       <div className="w-full px-[10px] sm:px-4 xl:px-[80px] pb-8 pt-14 border-b border-b-primary-500 grid grid-cols-1 sm:grid-cols-3 xl:grid-cols-4 gap-5 xl:gap-14">
