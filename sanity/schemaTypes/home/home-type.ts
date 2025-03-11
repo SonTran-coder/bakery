@@ -50,7 +50,7 @@ export const homeType = defineType({
         defineField({
           name: "desc",
           title: "Description",
-          type: "blockContent",
+          type: "text",
         }),
       ],
     }),

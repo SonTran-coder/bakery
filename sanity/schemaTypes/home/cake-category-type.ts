@@ -22,6 +22,6 @@ export const cakeCategoryType = defineField({
         }),
       ],
     }),
-    defineField({ name: "desc", type: "blockContent", title: "Description" }),
+    defineField({ name: "desc", type: "text", title: "Description" }),
   ],
 });
