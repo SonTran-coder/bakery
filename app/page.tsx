@@ -5,7 +5,7 @@ import {
   HomepageCarousel,
   HomepageFAQ,
 } from "@/types/home/sanity";
-import { notFound } from "next/navigation";
+import { Carousel } from "./components";
 
 interface HomepageSanityData {
   carousel?: HomepageCarousel;
@@ -17,5 +17,9 @@ interface HomepageSanityData {
 export default async function Home() {
   const data: HomepageSanityData | null = await getHomeSanity();
   if (!data) return null;
-  return <div className="mt-[49px]">This is my page</div>;
+  return (
+    <div className="mt-[49px] flex flex-col">
+      <Carousel data={data.carousel} />
+    </div>
+  );
 }
